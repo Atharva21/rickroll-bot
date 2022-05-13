@@ -5,4 +5,4 @@
 
 This Bot will check any links sent on discord and make sure they are "rickroll safe". If the video contains rickroll, it will reply to the link warning ⚠ users not to click. If the link is "rickroll safe" it will react with a tick (✅).
 
-You can [invite the bot to your own server](https://discord.com/api/oauth2/authorize?client_id=974308141258903634&permissions=3072&scope=bot)
+You can [invite the bot to your own server](https://discord.com/api/oauth2/authorize?client_id=974308141258903634&permissions=19520&scope=bot)
