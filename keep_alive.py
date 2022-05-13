@@ -1,5 +1,6 @@
 from flask import Flask
 from threading import Thread
+import os
 
 app = Flask("")
 
@@ -10,7 +11,7 @@ def main():
 
 
 def run():
-    app.run()
+    app.run(port=os.environ.get("PORT", 5000))
 
 
 def keep_alive():
