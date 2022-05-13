@@ -28,20 +28,8 @@ jobs:
               uses: actions/setup-python@v3.1.2
               with:
                 # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-                python-version: 3.8# optional, default is 3.x
+                python-version: 3.8
 
-            - name: Build
-              run: |
-                  cd client
-                  yarn
-                  yarn build
-
-            - name: Copy artifacts
-              run: |
-                  mkdir -p server/public
-                  cp -r client/dist/* server/public/
-
-            # ! server build goes here.
 
             - name: Heroku deploy
               uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
@@ -49,4 +37,5 @@ jobs:
                   heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
                   heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
                   heroku_email: ${{ secrets.HEROKU_EMAIL_ID }}
-                  appdir: 'server'
+              env:
+                  DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
