@@ -23,19 +23,12 @@ jobs:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
             - uses: actions/checkout@v3
 
-            # Runs a single command using the runners shell
-            - name: Setup Python
-              uses: actions/setup-python@v3.1.2
-              with:
-                # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-                python-version: 3.8
-
-
             - name: Heroku deploy
               uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
               with:
                   heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
                   heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
                   heroku_email: ${{ secrets.HEROKU_EMAIL_ID }}
+                  procfile: 'worker: python bot.py'
               env:
                   DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
