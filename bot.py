@@ -8,8 +8,7 @@ import random
 from keep_alive import keep_alive
 from datetime import date
 
-# _token = os.getenv("TOKEN")
-_token = "OTc0MzA4MTQxMjU4OTAzNjM0.GQsELg.WKmckfB3Bw66r2jXTW7MY4AresCV_OTI5Wknyo"
+_token = os.getenv("TOKEN")
 client = discord.Client()
 phrases = ["rickroll", "rick roll", "rick astley", "never gonna give you up"]
 
