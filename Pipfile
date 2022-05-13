@@ -8,7 +8,6 @@ flask = "*"
 asyncio = "*"
 aiohttp = "*"
 discord = "*"
-gunicorn = "*"
 
 [dev-packages]
 

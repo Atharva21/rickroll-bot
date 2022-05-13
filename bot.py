@@ -5,7 +5,6 @@ import re
 import aiohttp
 import asyncio
 import random
-from keep_alive import keep_alive
 from datetime import date
 
 _token = os.getenv("DISCORD_TOKEN")
@@ -63,4 +62,3 @@ async def on_message(message):
 
 
 client.run(_token)
-keep_alive()
