@@ -56,9 +56,6 @@ async def on_message(message):
     if await check_all_rickroll_present(links):
         await message.add_reaction("🚫")
         await message.reply(get_random_response())
-    else:
-        # testing
-        await message.add_reaction("✅")
 
 
 client.run(_token)
